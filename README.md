@@ -21,5 +21,25 @@ Dentro de sus caracteristicas principales son:
 - Compila e interpreta a la vez, primero se compila a formato intermedio **bytecode** y luego la **JVM** lo ejecuta.
 - Multi-hilo, puedo hacer varias cosas a la ves.
 
+**JVM, JRE, JDK**
+- JVM (Java virtual machine): Es el programa de ejecutar el bytecode (.class)
+- JRE (Java Routime Enviroment): JVM + Librerias de java para ejecutar programas
+- JDK (Java Develoment Kit): JRE + Herramientas para desarrollar programas
 
+*Nota: Desde Java 11 Oracle dejo de separar el JRE y actualemente viene directo en el JDK*
 
+**Compilación de un programa de java**
+> Zoo.java (Código fuente)-> **javac** -> zoo.class (bytecode)-> **JVM**, **JIT** -> Código de maquina
+
+**Algunas herramientas del JDK**
+- JAR: Java aplication resoruces
+- javadoc: Genera documentación apartir de comentarios /** */
+- jdeps: Analiza a que dependencias pertenece tu código
+- jlink: Crea un runtime personalizado
+- jmod: Trabaja con archivos de modulo .jmod
+
+**Flujo de JVM**
+- Carga los .class cuando se nececitan, los que generó *javac*
+- Comprueba que el bytecode sea valido
+- Interpretación + JIT
+- Libera automaticamente la memoria cuando ya no se utilizan los objetos
