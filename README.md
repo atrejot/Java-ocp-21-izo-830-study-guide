@@ -6,8 +6,24 @@
 ***
 
 ## 📌 Indice
-1. [Sobre java](#Sobre_java)
-2. [Metodo main, package e import](#metodo-main-package-e-import)
+1. [Convención de nomenglatura en java](#Convencion_de_nomenclatrura_en_java)
+2. [Sobre java](#Sobre_java)
+3. [Metodo main, package e import](#metodo-main-package-e-import)
+4. [Tipos de datos](#tipos-de-datos)
+
+# Convención de nomenclatura en java
+
+En java existen una convención de nomenglatura que define como debes de nombrar packages, clases, métodos etc.
+
+| Nombre    |           Tipo            |        Ejemplo        |
+|:----------|:-------------------------:|:---------------------:|
+| Packages  |         lowercase         | com.empresa.proyecto  |
+| Classes   | UpperCamelCase/PascalCase |       MyStudent       |
+| Interaces | UpperCamelCase/PascalCase |      Comparable       |
+| Methods   |       lowerCameCase       |       getName()       |
+| Variables |       lowerCameCase       |     nameOfCountry     |
+| Constants |     UPPER_SNAKE_CASE      |       MAX_SIZE        |
+
 
 # Sobre java
 
@@ -131,3 +147,41 @@ import java.util.ArrayList;
 ``` java
 import satic java.labg.Math. PI;
 ````
+
+
+# Tipos de datos
+
+**Tipos de datos primitivos**
+
+Los tipos de datos primitivos son aquellos que guardan directamente su valor en un variable, no tienen metodos, no son 
+y no pueden valer null. En java existen **8** tipos de datos primitivos *(byte, short, char, int, float, double, long, boolean)*
+
+
+Tabla maestra
+
+
+| Tipo    | Bits | Bytes |        Minimo        |       Maximo        |    Default     |
+|:--------|:----:|:-----:|:--------------------:|:-------------------:|:--------------:|
+| byte    |  8   |   1   |         -128         |         127         |       0        | 
+| short   |  16  |   2   |        -32768        |        32767        |       0        | 
+| int     |  32  |   4   |     -2147483648      |     2147483647      |       0        | 
+| long    |  64  |   8   | -9223372036854775808 | 9223372036854775807 |       0L       | 
+| float   |  32  |   4   |          -           |          -          |       0F       | 
+| double  |  64  |   8   |          -           |          -          |       0        | 
+| char    |  16  |   2   |          0           |        65535        | 0 / ('\u0000') | 
+| boolean |  -   |   -   |          -           |          -          |     false      | 
+
+*Nota: float tiene unos 6, 7 decimales y double unos 15, 16*
+
+
+
+
+
+
+
+
+
+
+
+
+
