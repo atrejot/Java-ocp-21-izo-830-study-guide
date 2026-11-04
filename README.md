@@ -7,6 +7,7 @@
 
 ## 📌 Indice
 1. [Sobre java](#Sobre_java)
+2. [Metodo main, package e import](#metodo-main-package-e-import)
 
 # Sobre java
 
@@ -43,3 +44,90 @@ Dentro de sus caracteristicas principales son:
 - Comprueba que el bytecode sea valido
 - Interpretación + JIT
 - Libera automaticamente la memoria cuando ya no se utilizan los objetos
+
+# Metodo main, package e import
+
+**Main**
+
+El método main es el punto de entrada principal del programa, es lo que se ejecuta y debde de aparecer exactamente asi
+``` java
+public static void main(String[] args)
+```
+La estructura del método **main** es la siguiente:
+- **Public**: Esto para que la *JVM* pueda llamarlo fuera de la clase
+- **Static**: La *JVM* lo llama sin crear objetos de la clase
+- **Void**: Para que no reciba retorno la función
+- **main**: Tal cual la leyenda *main* es como la *JVM* la conoce
+- **String[] args**: Recibe los argumentos
+
+Algunas variantes validas
+``` java
+public static void main(String[] args) // Como esta actualmente
+public static void main(String args[]) // Corchetes despues del nombre
+public static void main(String []args) // Los espacios no importan
+public static void main(String... args) // Equivalencia a un arreglo
+public static void main(String[] name) // El nombre del parametro es libre
+static public void mian(String[] args) // El orden de los modificadores no importa
+public static final void main(String[] args) // Final esta permitido
+public static void main(final String[] args) // Final en el parametro tambien
+public static synchronized main(String[] args) // Tambien esta permitido
+public static void main(String[] args) throws Exeption // Puede declarar una exepcion
+```
+
+Variantes que compilan pero **no** sirven como punto de entrada
+``` java
+public void main(String[] args) // Falta static
+static void main(String[] args) // Falta public
+public static int main(String[] args) // La función retorna
+public static void Main(String[] args) // El nombre main comeinza con M mayuscula
+public static void main(String args) // No es un arreglo
+public static void main(Object[] args) // Es un objeto no un arreglo
+public static void main() // Faltan parametros
+```
+
+Vairnates invalidas / no compilan
+``` java
+public static void main(String args...) // sintaxis incorrecta
+public static main(String[] args) // Falta el tipo de retorno
+public void static main(String[] args) // el tipo de retorno debe ir antes del nombre
+```
+
+**Package**
+
+Si existe, debe ser la primera instruccion del archivo antes solo pueden ir comentarios y lineas en blanco, solo puede
+tener una declaración de **package** por arhcivo, cada parte del packege es separado por puntos y debe de ser un identificador
+valido, por convenciones se escriben en minusculas y sin que comiencen con numeros.
+
+``` java
+package com.zoo.v2; // Valido
+package com.zoo.2v; // No es valido porque comienza con numero
+package com.zoo.class; // No es valido porque class es una palabra reservada
+package com.zoo._animales; // Valido
+package com.zoo.$animales; // Valido
+```
+
+**Import**
+
+Sirve para evitar tener que escribir el nombre completo de la clase cada vez que se llame
+
+El orden que sigue un programa es **PIC** *(Package-Import-class)*, cualquier otro orden no compila.
+
+Tipos de import
+1. Import de una sola clase
+``` java
+import java.util.ArrayList;
+```
+
+2. Import con comodin
+
+*Se encargan de importar todas las clases del packege*
+ ``` java
+ import java.util.*;
+ ```
+
+3. Import estatic
+
+*Importan metodos static, es decir miembros y variables*
+``` java
+import satic java.labg.Math. PI;
+````
