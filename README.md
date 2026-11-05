@@ -173,7 +173,32 @@ Tabla maestra
 
 *Nota: float tiene unos 6, 7 decimales y double unos 15, 16*
 
+Constantes utiles
 
+*(Para identificar el rango de valores)*
+``` java
+    Byte.MIN_VALUE; // -128
+    Byte.MAX_VALUE; // 127
+    Short.MIN_VALUE; // -32768
+    Short.MAX_VALUE; // 32767
+    Integer.MAX_VALUE; // -
+    Integer.MAX_VALUE; // -
+    Double.MIN_VALUE; // -
+    Double.MAX_VALUE; // -
+    Float.MIN_VALUE; // -
+    Float.MAX_VALUE; //-
+    Character.MIN_VALUE; //
+    Character.MAx_VALUE;
+```
+
+Variables por defecto
+
+Cuando y donde se declaran las variables para poder recibir un valor por defecto
+
+- Varianle de instancia (atributo de un objeto)
+- Variable static de la clase
+- Elementos de un arreglo
+- **No funciona para variables locales, dentro de un metodo**
 
 
 
