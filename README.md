@@ -201,6 +201,38 @@ Cuando y donde se declaran las variables para poder recibir un valor por defecto
 - **No funciona para variables locales, dentro de un metodo**
 
 
+Conversiones
+
+Implicita y automatica
+
+**byte - short - int - long - float - double**
+
+``` java
+int i = 100;
+long l = 1;
+double d = l;
+float f = d;
+int x = 'A'; // Valor de 65
+```
+
+chat y short no se convierte entre si aun que ambos tienen **16 bits** pero char no tiene signo y short si
+``` java
+short s = 'A';
+char c = 'A';
+short s2 = c; // Necesita cast
+```
+
+Reduccion
+
+Se necesita un cast explicito
+``` java
+double d = 9.99;
+int i = (int) d; // 9 (Trunca los decimales, no redondea)
+
+int x = 200;
+byte b = (byte) x; // Desbordamiento de memoria
+```
+
 
 
 

@@ -83,5 +83,19 @@ public class TypePrimitive {
         System.out.println("Valor de static: " + typePrimitive.ischarClass);
         System.out.println("Impresión de elementos de un arreglo: " + nums[0]);
         // System.out.println("Valor dentro del metodo no inicilizado: " + validate); // Marcara error
+
+        // Tipos de conversiones
+        // Conversion implicita y automatica
+        System.out.println("\n Conversión implicita y autonatica");
+        isLong = isInt; // Conversion de int a long
+        isDouble = isLong; // Conversion de long a double
+        System.out.println("Valor de int:  " + isDouble);
+
+        // conversiones de tipo reducción (Aquellas que necesitan uncast explicito)
+        System.out.println("\n Conversiones explicitas");
+        isDouble = 9.99;
+        isInt = (int) isDouble; // No redondea, solo elimina decimales
+        System.out.println("Valor de double: " + isInt);
+
     }
 }
