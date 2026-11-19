@@ -233,6 +233,13 @@ int x = 200;
 byte b = (byte) x; // Desbordamiento de memoria
 ```
 
+Promoción númerica en operaciones
+
+- Si los operadores son de tipo distinto, el menor se convierte en mayor
+- Si uno es entero y otro decimal, el entero se convierte a decimal
+- byte, short y char siempre se convierten a int
+- El resultado tiene el tipo de los operadores ya convertidos
+
 
 
 

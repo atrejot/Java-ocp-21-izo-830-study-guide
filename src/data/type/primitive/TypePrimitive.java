@@ -97,5 +97,9 @@ public class TypePrimitive {
         isInt = (int) isDouble; // No redondea, solo elimina decimales
         System.out.println("Valor de double: " + isInt);
 
+        // Promocion numerica en operadores
+        short a = 10, b = 20;
+        // short c = a + b; // Desbordamiento de memoria
+
     }
 }
