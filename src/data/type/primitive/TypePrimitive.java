@@ -101,5 +101,7 @@ public class TypePrimitive {
         short a = 10, b = 20;
         // short c = a + b; // Desbordamiento de memoria
 
+        // Desbordamienro y operadores trampa
+
     }
 }
