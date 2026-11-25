@@ -241,11 +241,46 @@ Promoción númerica en operaciones
 - El resultado tiene el tipo de los operadores ya convertidos
 
 
+Tipo por defecto de los literales
+
+Una literal  es un valor escrito directamente en código ej. 4, 3.34, 'A'
+**, una literal tiene su propio tipo antes de que se asigne a una variable**
+
+``` java
+long x = 5;
+```
+
+¿Por qué precisamente int y double?
+
+Double e int son los datos que soportan la mayoria de valores ya sea para enteros o flotantes
+
+El compilador es el que decide a travez de una seria de preguntas como ejemplo
 
 
+**Tipos de datos por referencia**
+
+La diferencia principal radica en que el tipo de dato primitivo guarda el valor y el tipo de dato de referencia
+guarda la referencia del objeto que se ingreso.
+
+Los tipos de datos de referencia son todo aquello que no sea uno de los 8 tipos de datos primitivos
 
 
+| Tipo           |                       Ejemplo                       |
+|:---------------|:---------------------------------------------------:|
+| class jdk      | String, Stringbuilder, Object, LocalDate, Arraylist | 
+| class wrapper  |         Integer, Double, Character, Boolean         | 
+| Clases propias |                   class studen {}                   | 
+| Interfaces     |             List, Runnable, Comparable              | 
+| Enums          |              enum Color {Rojo, Verda}               | 
+| Record         |           record Punto (int x, int y) {}            | 
+| Array          |              int[], String[], int[][]               | 
 
+Valores por defecto
 
+A diferencia de los tipos de datos **primitivos** estos no si pueden inicializarse con null
 
-
+``` java
+String x = null; // Correcto, si puede ser null
+Integer y = null; // Correcto, si puede ser null
+int i = null; // Un primitivo no puede ser null
+```
