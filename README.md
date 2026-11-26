@@ -284,3 +284,39 @@ String x = null; // Correcto, si puede ser null
 Integer y = null; // Correcto, si puede ser null
 int i = null; // Un primitivo no puede ser null
 ```
+
+**NullPointerExecption**
+
+Se lanza cuando se intenta lanzar un objeto a travez de una referencia null
+
+```java
+String x = null; // Declaración de variable
+x.length(); // NPE
+x.toUppercase(); // NPE
+```
+
+Lo que no lanza un **NPE**
+```java
+String x = null; 
+System.out.printl("valor " + x); // La concatenación convierte null en "null"
+System.out.printl(x == null); // true
+String y = x; // Copia la referencia de memoria
+```
+
+**instanceOf**
+
+Es un operador para determinar si un objeto es de tipo concreto
+```java
+String x = "name";
+System.out.printl(x instanceof String); // Devuelve true
+System.out.printl(x instanceOf Object); // true, todo string es un objeto
+
+```
+
+**Crear Objetos y asignarles referencias**
+
+Formas de crear objetos
+``` java
+Perro perro = new Perro(
+
+```
