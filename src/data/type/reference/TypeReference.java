@@ -1,6 +1,7 @@
 package data.type.reference;
 
 import java.io.ObjectInputFilter;
+import java.util.ArrayList;
 
 /** Tipos de datos por referencia */
 
@@ -36,6 +37,22 @@ public class TypeReference {
         String inInstanceof = "dif";
         System.out.println(inInstanceof instanceof String); // true
         System.out.println(inInstanceof instanceof Object); // true
+
+
+        // Creación de objetos
+        // Perro perro = new Perro(); // Con new para llamar al constructor
+        String a = "nombre"; // Literal con string
+        Integer i = 10; // Autoboxing (Conversion de un tipo primitivo a su clase)
+        int[] x = {1,2,3}; // Lista de arreglos
+        // var lista = ArrayList<String>(); // Lista de array
+
+
+        // Asignación de una referencia, copia la dirección no el objeto
+        StringBuilder nameOfStringBuilder = new StringBuilder("hola"); // Creación de string builder
+        StringBuilder secondNameOfStringBuilder = nameOfStringBuilder; //Asignación de dirección de objeto
+        secondNameOfStringBuilder.append(" Mundo"); // Asignación de nuevos valores
+        System.out.println("\n Asignación de referencia");
+        System.out.println("Valor de string builder: " + nameOfStringBuilder);
 
 
     }

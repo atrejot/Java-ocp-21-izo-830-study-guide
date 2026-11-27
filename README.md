@@ -317,6 +317,20 @@ System.out.printl(x instanceOf Object); // true, todo string es un objeto
 
 Formas de crear objetos
 ``` java
-Perro perro = new Perro(
-
+Perro perro = new Perro(); // con new para llamar al constructor
+String a = "name"; // literal String
+Integer i = 5; // autoboxing
+int[] rex = {1, 2, 3, 4}; // Arreglo
+var lista = new ArraList<String>()
 ```
+
+Asignar una referencia, copia el dirección no el objeto
+
+``` java
+StringBuilder a = new StringBuilder("a"); // Creacion de objeto
+StringBuilder b = a; // Asignación de referencia, apunta al mismo objeto de a
+b.append(" Mundo"); // Concatenación para StringBuilder
+System.out.printl(a); // Como se apunta al mismo objeto se concatena el valor de a -> a Mundo
+```
+
+**Nota** cuando dos variables apuntan al mismo **objeto** se dice que son aias, ya que un cambio se ve a travez de las dos
