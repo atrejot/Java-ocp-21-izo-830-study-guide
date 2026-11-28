@@ -54,6 +54,13 @@ public class TypeReference {
         System.out.println("\n Asignación de referencia");
         System.out.println("Valor de string builder: " + nameOfStringBuilder);
 
+        // .equals() y ==
+        // La principal diferencia es que .equals() realiza la comparación del valor y ==
+        // hace la comparación de la dirección de memoria
+        String aEquals = "a"; // Valor 1
+        String bEquals = "a"; // Valor 2
+        System.out.println(aEquals == bEquals); // false: realiza la compración de dirección de memoria
+        System.out.println(aEquals.equals(bEquals));// true: realiza la comparación del valor
 
-    }
+     }
 }
