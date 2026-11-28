@@ -334,3 +334,25 @@ System.out.printl(a); // Como se apunta al mismo objeto se concatena el valor de
 ```
 
 **Nota** cuando dos variables apuntan al mismo **objeto** se dice que son aias, ya que un cambio se ve a travez de las dos
+
+**== frente .equals()**
+
+La diferencia es **==** hace referencia hacia el mismo objeto, la misma dirección, **.equeals()** valida el contenido
+
+```java
+String a = "a"; // Objeto 1
+String b = "a"; // Objeto 2
+System.out.printl(a == b); // false, distinta dirección de memoria
+System.out.printl(a.equals(b)); // true: tienen el mismo valor
+```
+
+**.equals()** por defecto
+
+Si una clase no sobrescribe equals(), hereda de object que seria lo mismo que comparar ==
+
+```java
+class Perro {String: nombre;}
+Perro p1 = new Perro("a"); // Declaración de valor 1
+Perro p2 = new Perro("a"); //Declaración de valor 2
+p1.equeals(p2); // false: comparación de dirección de mamoria
+```
